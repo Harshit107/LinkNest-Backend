@@ -17,6 +17,10 @@ const WebsiteSchema: Schema = new Schema({
   encryptedPassword: { type: String },
   folderId: { type: String, ref: 'Folder', required: true },
   userId: { type: String, ref: 'User', required: true },
-}, { timestamps: { createdAt: 'created_at', updatedAt: false } });
+}, { 
+  timestamps: { createdAt: 'created_at', updatedAt: false },
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true }
+});
 
 export default mongoose.model<IWebsite>('Website', WebsiteSchema);
