@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  linknest_db:
+    image: mongo:latest
+    container_name: linknest_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - backend_mongo_data:/data/db
+
+volumes:
+  backend_mongo_data:
