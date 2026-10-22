@@ -19,3 +19,4 @@ if (!parsedEnv.success) {
 }
 
 export const env = parsedEnv.data;
+export { DOMAINS } from './domain';
